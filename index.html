@@ -1,0 +1,54 @@
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+
+
+<style>
+
+span.field-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    bottom: 1.7em;
+    color: black;
+    z-index: 99;
+    font-size: 18px;
+    left: 93%;
+}
+
+</style>
+</head>
+<body>
+<div class="col-sm-3">
+  <input type="password" class="form-control" id="pass" name="pass"  required="" >
+  <span toggle="#pass" class="fa fa-eye field-icon toggle-password"></span>
+</div>
+
+
+<script>
+
+$('.toggle-password').on('click', function() {
+  $(this).toggleClass('fa-eye fa-eye-slash');
+  let input = $($(this).attr('toggle'));
+  if (input.attr('type') == 'password') {
+    input.attr('type', 'text');
+  }
+  else { 
+    input.attr('type', 'password');
+  }
+});  
+
+
+</script>
+</body>
+</html>
