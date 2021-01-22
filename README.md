@@ -1,2 +1,2 @@
-# Password-view-toggle
+# Password view  toggle
 this is password toggle script
